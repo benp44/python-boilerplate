@@ -1,13 +1,13 @@
 [flake8]
 select = B,B9,BLK,C,E,F,I,S,W
 max-line-length = 150
-ignore = 
+ignore =
     # E203 whitespace before ‘:’ (Not PEP8 compliant, Python Black)
-    E203 
+    E203
     # E501 line too long (82 > 79 characters) (replaced by B950 from flake8-bugbear, https://github.com/PyCQA/flake8-bugbear)
-    E501 
+    E501
     # W503 line break before binary operator (Not PEP8 compliant, Python Black)
-    W503 
+    W503
 
 # flake8-import-order
 import-order-style = google

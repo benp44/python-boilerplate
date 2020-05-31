@@ -12,9 +12,7 @@ LINT_LOCATIONS = ["src", "tests", __file__]
 
 def install_with_constraints(session, *args, **kwargs):
     with tempfile.NamedTemporaryFile() as requirements:
-        session.run(
-            "poetry", "export", "--dev", "--format=requirements.txt", f"--output={requirements.name}", external=True,
-        )
+        session.run("poetry", "export", "--dev", "--format=requirements.txt", f"--output={requirements.name}", external=True)
         session.install(f"--constraint={requirements.name}", *args, **kwargs)
 
 
