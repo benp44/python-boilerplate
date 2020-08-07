@@ -1,0 +1,5 @@
+.coverage
+.nox
+.vscode
+__pycache__
+*.egg-info
